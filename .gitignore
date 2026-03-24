@@ -1,0 +1,37 @@
+# Large zip files
+*.zip
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+env/
+.env
+*.log
+*.pot
+*.sqlite3
+db.sqlite3
+migrations/__pycache__/
+staticfiles/
+media/
+
+# Node / React
+node_modules/
+dist/
+build/
+.cache/
+frontend/.env.local
+frontend/.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
