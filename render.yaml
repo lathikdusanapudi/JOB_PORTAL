@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: job-portal-backend
+    env: python
+    region: singapore
+    rootDir: backend
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn jobportal.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: DEBUG
+        value: "False"
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: "True"
+      - key: SECRET_KEY
+        generateValue: true
