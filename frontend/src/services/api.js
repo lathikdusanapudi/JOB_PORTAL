@@ -1,12 +1,4 @@
-const getApiUrl = () => {
-  const envUrl = import.meta.env.VITE_API_BASE_URL;
-  if (envUrl && !envUrl.includes('xxxx') && !envUrl.startsWith('/')) {
-    return envUrl.replace(/\/+$/, '');
-  }
-  return 'https://job-portal-backend.onrender.com/api';
-};
-
-const BASE_URL = getApiUrl();
+const BASE_URL = "https://job-portal-backend-db2g.onrender.com/api";
 
 
 // Save tokens

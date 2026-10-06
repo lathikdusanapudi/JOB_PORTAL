@@ -3,15 +3,7 @@ import axios from 'axios';
 
 const AuthContext = createContext(null);
 
-const getApiUrl = () => {
-  const envUrl = import.meta.env.VITE_API_BASE_URL;
-  if (envUrl && !envUrl.includes('xxxx') && !envUrl.startsWith('/')) {
-    return envUrl.replace(/\/+$/, '');
-  }
-  return 'https://job-portal-backend.onrender.com/api';
-};
-
-const API_URL = getApiUrl();
+const API_URL = "https://job-portal-backend-db2g.onrender.com/api";
 
 
 export const AuthProvider = ({ children }) => {
