@@ -1,4 +1,4 @@
-const BASE_URL = "https://job-portal-backend-db2g.onrender.com/api";
+const BASE_URL = "https://job-portal-z7ku.onrender.com/api";
 
 
 export const loginUser = async (data) => {

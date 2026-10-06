@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const AuthContext = createContext(null);
 
-const API_URL = "https://job-portal-backend-db2g.onrender.com/api";
+const API_URL = "https://job-portal-z7ku.onrender.com/api";
 
 
 export const AuthProvider = ({ children }) => {
