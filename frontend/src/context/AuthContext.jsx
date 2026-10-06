@@ -1,9 +1,15 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const AuthContext = createContext(null);
+const getApiUrl = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (envUrl && !envUrl.includes('xxxx') && !envUrl.startsWith('/')) {
+    return envUrl.replace(/\/+$/, '');
+  }
+  return 'https://job-portal-backend.onrender.com/api';
+};
 
-const API_URL = (import.meta.env.VITE_API_BASE_URL || 'https://job-portal-backend.onrender.com/api').replace(/\/+$/, '');
+const API_URL = getApiUrl();
 
 
 export const AuthProvider = ({ children }) => {
