@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
+const BASE_URL = (import.meta.env.VITE_API_BASE_URL || "https://job-portal-backend.onrender.com/api").replace(/\/+$/, '');
 
 
 export const loginUser = async (data) => {

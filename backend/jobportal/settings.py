@@ -126,18 +126,26 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
-# ─── CORS Settings ─────────────────────────────────────
-CORS_ALLOW_ALL_ORIGINS = os.getenv('CORS_ALLOW_ALL_ORIGINS', 'True').lower() == 'true'
+# ─── CORS & CSRF Settings ──────────────────────────────
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+    'https://job-portal-eight-pearl.vercel.app',
 ]
 
 if os.getenv('CORS_ALLOWED_ORIGINS'):
     CORS_ALLOWED_ORIGINS.extend([origin.strip() for origin in os.getenv('CORS_ALLOWED_ORIGINS').split(',')])
 
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'https://*.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173',
+]
 
